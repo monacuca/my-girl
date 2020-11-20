@@ -1,7 +1,47 @@
 var myFont;
 var generate=false;
+
+
+let likes = ["She enjoys rainy days and likes to spend them watching nature documentaries and making soup. ",
+             "She likes road trips, especially the long ones. " , 
+             "One of her favorite activities is going to the beach. ",
+             "Her favorite candies include chocolate and guava paste, but are not limited to others. ", 
+             "She loves a good wine and charcuterie board pairing. ",
+             "Her favorite color is baby blue. ",
+             "She often listens to lo-fi music while studying. ", 
+             "Her favorite subject in school growing up was math, but she also found history really interesting. ",
+             "She is introverted and enjoys curling up with her pets in a particularly cold day. ",
+             "She is extroverted and highly sociable, but sometimes she likes to stay at home and read a book or watch a series. ",
+             "She is athletic and energetic. "
+            ];
+let dislikes = ["She dislikes wearing cotton clothing because it makes her itchy. ",
+               "She is scared of moths. " ,
+                "She can be lazy and sometimes a little rude. ", 
+                "Sometimes she is a little too hard on herself despite being a hardworker. ",
+                "She sleeps a lot on weekends and makes art for her friends on her free time. ",
+               "She still isn't completely sure of what she wants to do. ",
+               "She likes putting different essential oils in her bath. ",
+                "She is terrified of wild animals but she can appreciate them from a distance. ", 
+               "One of her favorite pasttimes is trying out different sports. ",
+               "She puts  a lot of pressure on herself. ", 
+                "Prefers to spend time in person rather than on social media. ",
+                "She loves winter. ", 
+                "She hates the cold. ", 
+                "Her favorite animals are pandas. "
+              ];
+
+let hobbies = ["Some of her favorite pastimes include knitting and painting. ",
+              "She had a pet hamster as a child. " , 
+               "She likes creating scrapbooks and other arts & crafts activities. ",
+               "She volunteers at her local library to read to kids. ", 
+               "She loves to dance but is terrible at it. ",
+               "She likes to light candles after long days and right before important events. ",
+              "One of her main hobbies is stamp collecting. ",
+              "She enjoys rainy days. "];
+
 var mX;
 var mY;
+let like, dislike, hobby; 
 
 function preload(){
   myFont = loadFont("https://cdn.glitch.com/d8c943d1-395d-43b1-acc8-67242bca854b%2FSegoe%20UI.ttf?v=1605640036385");}
@@ -13,7 +53,10 @@ function setup() {
   }
   
   background(color("orange"));
- 
+  like = random(likes);
+  dislike = random(dislikes);
+  hobby = random(hobbies);
+
 }
 
 function draw() {
@@ -28,8 +71,9 @@ function draw() {
   
   vaporwave_popup(w, h);
   if (generate){
-       //a = floor(random(0,50));
-       //b = floor(random(0,51)); 
+      like = random(likes);
+    dislike = random(dislikes);
+    hobby = random(hobbies);
     generate = false;
     mX = 0;
     mY = 0;
@@ -55,11 +99,8 @@ function banner_text(w, h){
     fill(0);
   textSize(min(width, height)/1000*26);
     noStroke();
-    text("This woman is in STEM."+
-         " She enjoys rainy days and likes to spend them watching"+
-         " nature documentaries and making soup. She dislikes wearing"+
-         "cotton clothing because it makes her itchy and her favorite hobbies"+
-         " are knitting and playing sports. ", -5*w/12,-6*h/14+h/9, 5*w/6)
+  
+    text("This woman is in STEM. "+ like + dislike + hobby, -5*w/12,-6*h/14+h/9, 5*w/6)
   pop();
   
 }
