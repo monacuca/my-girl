@@ -12,22 +12,39 @@ let likes = ["She enjoys rainy days and likes to spend them watching nature docu
              "Her favorite subject in school growing up was math, but she also found history really interesting. ",
              "She is introverted and enjoys curling up with her pets in a particularly cold day. ",
              "She is extroverted and highly sociable, but sometimes she likes to stay at home and read a book or watch a series. ",
-             "She is athletic and energetic. "
+             "She is athletic and energetic. ", 
+             "She secretly loves reality shows like Love Island and The Bachelor. ",
+             "She was on the soccer team in high school, but she hasn’t played since she tore her ACL in senior year. ",
+             "She’s such a clutterphile that there’s barely any open space to walk in her room. ",
+             "She is highly organized and meticulous with her personal space. ",
+             "She plays the clarinet. "
+             
+             
+
             ];
 let dislikes = ["She dislikes wearing cotton clothing because it makes her itchy. ",
                "She is scared of moths. " ,
-                "She can be lazy and sometimes a little rude. ", 
-                "Sometimes she is a little too hard on herself despite being a hardworker. ",
                 "She sleeps a lot on weekends and makes art for her friends on her free time. ",
-               "She still isn't completely sure of what she wants to do. ",
                "She likes putting different essential oils in her bath. ",
                 "She is terrified of wild animals but she can appreciate them from a distance. ", 
                "One of her favorite pasttimes is trying out different sports. ",
-               "She puts  a lot of pressure on herself. ", 
                 "Prefers to spend time in person rather than on social media. ",
                 "She loves winter. ", 
                 "She hates the cold. ", 
-                "Her favorite animals are pandas. "
+                "Her favorite animals are pandas. ",
+                "She is a font snob. ",
+                "She has a little brother she loves to death. ",
+                "She wants a cat, but she’s terribly allergic to them. ",
+                "She doesn’t have a driver’s license. ",
+                "She has a hairless cat named Yoda. ", 
+                "She says she listens only to alternative rap and classic jazz, but when no one else is around, she plays 90s boy bands on loop. ",
+                "She snorts when she laughs. ",
+                "Her brain doesn’t function until after 11:30 am. ",
+                "She drinks coffee by the gallon. ",
+                "At every Zoom meeting and class she’s been in, she has not once changed out of her pajama pants. ",
+                "Her handwriting is barely legible. ",
+                "She still plays Neopets. "
+                
               ];
 
 let hobbies = ["Some of her favorite pastimes include knitting and painting. ",
@@ -37,7 +54,18 @@ let hobbies = ["Some of her favorite pastimes include knitting and painting. ",
                "She loves to dance but is terrible at it. ",
                "She likes to light candles after long days and right before important events. ",
               "One of her main hobbies is stamp collecting. ",
-              "She enjoys rainy days. "];
+              "She enjoys rainy days. ", 
+               "She doesn’t procrastinate, but she’s such a perfectionist that it always takes her ages to finish her task. ", 
+              "She wants a cat, but she’s terribly allergic to them. ",
+               "She writes reminders to herself on her palms and forearms. ",
+               "She rides her bike or takes the bus to get to work. ",
+               "She’s bad at baking but does it anyway. ",
+               "She likes long drives with her friends. ",
+               "She collects stickers from the places she’s visited. ",
+               "She likes food that’s so spicy it makes her tear up when eating it. ",
+               "She dreams of living alone in an overpriced Manhattan apartment one day. ",
+               "She has a small army of plants in her room. "
+              ];
 
 var mX;
 var mY;
@@ -100,7 +128,7 @@ function banner_text(w, h){
   textSize(min(width, height)/1000*26);
     noStroke();
   
-    text("This woman is in STEM. "+ like + dislike + hobby, -5*w/12,-6*h/14+h/9, 5*w/6)
+    text("This woman is studying in a STEM field. "+ like + dislike + hobby, -5*w/12,-6*h/14+h/9, 5*w/6)
   pop();
   
 }
